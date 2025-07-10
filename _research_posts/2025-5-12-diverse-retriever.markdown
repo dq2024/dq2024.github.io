@@ -8,12 +8,12 @@ advisor: Eunsol Choi
 advisor_url: https://eunsol.github.io/
 mentor_url: https://timchen0618.github.io/
 mentor: Hung-Ting Chen
-description: Iterative Retriever for Multi Perspective QA
+description: Iterative Dense Retriever for Multi Perspective QA
 ---
 
 <div class="project-content layout-sidebar">
   
-  <h4>Iterative Retriever for Multi Perspective QA</h4>
+  <h4>Iterative Dense Retriever for Multi Perspective QA</h4>
   
   <p>
   I’m currently working on improving our retrieval pipeline.  
