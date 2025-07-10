@@ -6,6 +6,7 @@ start_date: 2023-01-01
 end_date:   2023-05-01
 github: https://github.com/dq2024/NLP-Cluster-Categorization
 description: YouTube channel clustering system
+pdf: /assets/files/channel_atlas.pdf
 ---
 
 <div class="project-content layout-centered-yt">
@@ -16,7 +17,7 @@ description: YouTube channel clustering system
   
   
   <p>
-    Channel Atlas is an unsupervised NLP framework I developed to automatically categorize and explore thematic relationships across YouTube channels. The project began by scraping and collecting transcript corpora from over 250 diverse YouTube channels using BeautifulSoup, then preprocessing them with NLTK for tokenization, stop-word removal, and normalization.
+    Channel Atlas is an unsupervised NLP framework I developed to automatically categorize and explore thematic relationships across YouTube channels. The project began by scraping and collecting transcript corpora from over 250 diverse YouTube channels using BeautifulSoup, then preprocessing them with NLTK for tokenization, stop word removal, and normalization.
   </p>
 
   <p>
@@ -24,7 +25,7 @@ description: YouTube channel clustering system
   </p>
 
   <p>
-    With these pairwise similarities, I constructed a channel similarity graph in NetworkX, where edges represent semantic closeness. Applying the Clauset–Newman–Moore modularity optimization algorithm allowed me to detect tightly knit communities—groups of channels that consistently cover related topics without any prior labels or supervision. I then visualized these clusters and their interconnections using Gephi to qualitatively assess topic coherence and uncover hidden content ecosystems on YouTube.
+    With these pairwise similarities, I constructed a channel similarity graph in NetworkX, where edges represent semantic closeness. Applying the Clauset–Newman–Moore modularity optimization algorithm allowed me to detect tightly knit communities (groups of channels that consistently cover related topics without any prior labels or supervision). I then visualized these clusters and their interconnections using Gephi to qualitatively assess topic coherence and uncover hidden content ecosystems on YouTube.
   </p>
 
   <p>

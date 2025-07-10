@@ -61,15 +61,15 @@
 	margin-top: 0;              // No top margin
 }
 
-.about-content .bio {
-	flex: 1 1 auto;             // take up available space
-	min-width: 0;
-}
+// .about-content .bio {
+// 	flex: 1 1 auto;             // take up available space
+// 	min-width: 0;
+// }
 
-.about-content .bio p {
-	margin: 0;
-	line-height: 1.7;           // comfortable reading line height
-}
+// .about-content .bio p {
+// 	margin: 0;
+// 	line-height: 1.7;           // comfortable reading line height
+// }
 
 .about-content .photo {
 	flex: 0 0 300px;            // fixed width for photo
@@ -175,6 +175,21 @@
     color: #2a2a2a;
   }
 }
+
+
+
+  // Base project content styles
+.project-content {
+  margin-top: 1em;
+  font-size: 0.9em;
+  
+  .project-tagline {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    color: #2a2a2a;
+  }
+}
 // Layout 1: Sidebar (image on right with text wrapping)
 .project-content.layout-sidebar {
 	.project-image {
@@ -267,6 +282,79 @@
 		display: block;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
+	  }
+	}
+  }
+
+  .research_posts {
+	&.noList {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	li {
+	  margin-bottom: 2em;
+	  padding-bottom: 2em;
+	  border-bottom: 1px solid #E0E0E0;
+	  
+	  &:last-child {
+		border-bottom: none;
+	  }
+	}
+	
+	// Date styling - float to the right
+	.date {
+	  float: right;
+	  font-size: 0.9em;
+	  color: #6B7280;
+	  font-weight: 400;
+	  margin-top: 0.3em; // Align with title
+	}
+	
+	// Title/link styling
+	h3 {
+	  margin: 0 0 0.5em 0;
+	  font-size: 1.3em; // Smaller than default h3
+	  font-weight: 600;
+	  
+	  a {
+		text-decoration: none;
+		color: $grey; // Dark grey instead of blue
+		transition: color 0.2s ease;
+		
+		&:hover {
+		  color: $link-color; // Your blue on hover
+		}
+	  }
+	}
+	
+	// Description styling
+	.description {
+	  margin: 0;
+	  color: #757575;
+	  font-size: 0.95em;
+	  line-height: 1.6;
+	  clear: both; // Clear the floated date
+	}
+  }
+  
+  // Alternative modern card-style layout (optional)
+  .research_posts-modern {
+	li {
+	  display: flex;
+	  align-items: baseline;
+	  justify-content: space-between;
+	  gap: 2em;
+	  
+	  .post-content {
+		flex: 1;
+	  }
+	  
+	  .date {
+		flex-shrink: 0;
+		font-size: 0.85em;
+		color: #9E9E9E;
 	  }
 	}
   }

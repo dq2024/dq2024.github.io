@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "JEPA Navigator"
+date:   2024-12-15
+start_date: 2024-09-01
+end_date:   2024-12-01
+github: https://github.com/dq2024/DL_Final_Proj_JEPA
+description: Self-supervised world modeling with JEPA
+pdf: /assets/files/jepa.pdf
+---
+
+<div class="project-content layout-centered">
+  <h4>Self-Supervised JEPA World Model for Two-Room Navigation</h4>
+
+  <p>
+    This project explored building a self-supervised Joint Embedding Predictive Architecture (JEPA) to learn representations of an agent navigating a simple two-room environment. The goal was to train a model that could predict future latent representations based solely on current observations and actions without explicit reconstruction of pixel frames. 
+    We trained our JEPA models on 2.5 million frames of agent trajectories, ultimately learning structured latent spaces that capture spatial temporal dynamics and can be probed to recover true (x, y) agent coordinates.
+  </p>
+
+  <h4>Machine Learning Techniques</h4>
+  <ul style="margin-top: -0.3em; margin-bottom: 1em;">
+    <li>Implemented both recurrent and teacher-forcing JEPA variants with a ResNet-based CNN encoder to embed each frame into 128-D latent vectors.</li>
+    <li>Used a lightweight MLP to fuse these embeddings with action vectors, predicting the next latent state to model environment dynamics.</li>
+    <li>Optimized an energy-based objective by minimizing MSE between predicted and target encoder outputs, supported by a contrastive margin loss to encourage separation in representation space.</li>
+    <li>Applied VicReg-inspired variance and covariance regularization to prevent representational collapse and maintain feature diversity.</li>
+    <li>Stabilized training by introducing a momentum updated target encoder (similar to BYOL) for consistent gradient signals.</li>
+    <li>Employed a quadratic warm-up with cosine decay for learning-rate scheduling, and ran extensive sweeps on hyperparameters using Weights & Biases for reproducibility.</li>
+    <li>Accelerated training and handled large-scale data with PyTorch’s Distributed Data Parallel (DDP) across multiple GPUs, allowing us to process over 2.5 million frames efficiently.</li>
+  </ul>
+
+  <h4>Results</h4>
+  <p>
+    The final model demonstrated promising ability to predict latent future states, as evidenced by probing experiments with a 2-layer MLP to recover ground truth (x, y) coordinates. We evaluated performance on standard trajectories, wall-collision sequences, long horizon prediction, and out-of-domain test sets—reporting mean squared errors that confirmed the quality of our learned representations.
+  </p>
+  <p>
+    Although we faced challenges with instability and early overfitting (mitigated by gradient clipping, adjusted learning rates, and robust regularization) our best models showed clear improvements over initial baselines. Future work would include scaling to richer environments and experimenting with more advanced self-supervised losses.
+  </p>
+
+</div>

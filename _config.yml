@@ -17,6 +17,11 @@ highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 5
 
+collections:
+  research_posts:
+    output: true       
+    permalink: /research/:path/
+
 navigation:
     - title: Home
       url: /index.html
