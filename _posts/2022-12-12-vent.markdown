@@ -1,0 +1,24 @@
+---
+layout: post
+custom_class: wide-post
+title: "VENT"
+date: 2022-05-01
+start_date: 2022-01-01
+end_date: 2022-05-01
+github: https://github.com/yourusername/vent
+description: Emotion-Aware Spotify Playlist Generator
+---
+
+<div class="project-content layout-sidebar">
+  <div class="project-image">
+    <img src="/assets/img/vent.png" alt="VENT App Screenshot">
+  </div>
+  
+  <h4>Emotion-Aware Spotify Playlist Generator</h4>
+  
+  <p>I created an end-to-end, emotion-aware music-recommendation platform that begins with natural-language understanding and finishes with a curated Spotify playlist. Users start on a simple Flask web page where they can "vent" about how they feel. The application splits that free-form text into sentences, then feeds each fragment into a Naive Bayes emotion classifier.</p>
+  
+  <p>The model outputs a list of emotions and their associated confidence levels. From there, the app queries Spotify's API to find songs that match the detected emotional profile, creating a personalized playlist that resonates with the user's current mood.</p>
+  
+  <p>This project combines natural language processing, machine learning, and music information retrieval to create a unique user experience that transforms emotions into curated music selections.</p>
+</div>

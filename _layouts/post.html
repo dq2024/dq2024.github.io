@@ -9,11 +9,18 @@ layout: default
   {%- endif -%}
   <header>
     <h1 class="postTitle">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
+    <p class="meta">
+      {% if page.start_date and page.end_date %}
+        {{ page.start_date | date: "%b %Y" }} - {{ page.end_date | date: "%b %Y" }}
+      {% else %}
+        {{ page.date | date: "%b %Y" }}
+      {% endif %} 
+      {% if page.github %} | <a href="{{ page.github }}" target="_blank">GitHub</a>{% endif %}
+    </p>
   </header>
 
   {{ content }}
-
+  
   <!-- POST NAVIGATION -->
   <footer class="postNav clearfix">
     {%- if page.previous.url -%}
