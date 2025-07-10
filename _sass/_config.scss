@@ -5,7 +5,7 @@ COLOR VARIABLES
 // Better default colors
 // Cool
 $aqua:  #7FDBFF;
-$blue:  #0074D9;
+$blue:  #0969da;
 $navy:  #001F3F;
 $teal:  #39CCCC;
 $green: #2ECC40;
@@ -21,14 +21,14 @@ $maroon:  #85144B;
 // Gray Scale
 $white:  #fff;
 $silver: #ddd;
-$grey:   #aaa;
+$grey:   #6B7280;
 $black:  #111;
 
 // Color variables
-$primary-color: seagreen;
+$primary-color: $grey;
 $secondary-color: #233E5B;
 $tertiary-color: #aaa;
-$link-color: $primary-color;
+$link-color: $blue;
 $background-color: $primary-color;
 
 $bad-color: $red; // Bad color for errors, validation etc.

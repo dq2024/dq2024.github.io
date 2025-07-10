@@ -33,3 +33,126 @@
 }
 
 // If IE support is needed you can add them here or create another stylesheet for specific IE fixes
+// -----------------------------
+// About-Me box layout
+// -----------------------------
+.pageTitle {
+	text-align: left;           // left-align the title
+	margin-bottom: 2em;         // space between title and content
+	font-size: 4em;             // large title like "Projects"
+	font-weight: 900;           // heavy bold weight
+	color: #2a2a2a;             // dark color
+	letter-spacing: -0.02em;    // slightly tighter letter spacing
+}
+
+// About page specific styling
+#about h1 {
+	// The h1 will inherit the default theme styling
+	// which should match the Projects page
+	margin-bottom: 1;           // Remove bottom margin
+}
+
+// Content container with flexbox layout
+.about-content {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;    // align items to top
+	gap: 3em;                   // space between text and image
+	margin-top: 0;              // No top margin
+}
+
+.about-content .bio {
+	flex: 1 1 auto;             // take up available space
+	min-width: 0;
+}
+
+.about-content .bio p {
+	margin: 0;
+	line-height: 1.7;           // comfortable reading line height
+}
+
+.about-content .photo {
+	flex: 0 0 300px;            // fixed width for photo
+	margin-top: -5em;         // Negative margin to align with h1
+	margin-bottom: 2em;
+}
+
+.about-content .photo img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+// Projects/Posts list styling
+.posts {
+	&.noList {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	li {
+	  margin-bottom: 2em;
+	  padding-bottom: 2em;
+	  border-bottom: 1px solid #E0E0E0;
+	  
+	  &:last-child {
+		border-bottom: none;
+	  }
+	}
+	
+	// Date styling - float to the right
+	.date {
+	  float: right;
+	  font-size: 0.9em;
+	  color: #6B7280;
+	  font-weight: 400;
+	  margin-top: 0.3em; // Align with title
+	}
+	
+	// Title/link styling
+	h3 {
+	  margin: 0 0 0.5em 0;
+	  font-size: 1.3em; // Smaller than default h3
+	  font-weight: 600;
+	  
+	  a {
+		text-decoration: none;
+		color: $grey; // Dark grey instead of blue
+		transition: color 0.2s ease;
+		
+		&:hover {
+		  color: $link-color; // Your blue on hover
+		}
+	  }
+	}
+	
+	// Description styling
+	.description {
+	  margin: 0;
+	  color: #757575;
+	  font-size: 0.95em;
+	  line-height: 1.6;
+	  clear: both; // Clear the floated date
+	}
+  }
+  
+  // Alternative modern card-style layout (optional)
+  .posts-modern {
+	li {
+	  display: flex;
+	  align-items: baseline;
+	  justify-content: space-between;
+	  gap: 2em;
+	  
+	  .post-content {
+		flex: 1;
+	  }
+	  
+	  .date {
+		flex-shrink: 0;
+		font-size: 0.85em;
+		color: #9E9E9E;
+	  }
+	}
+  }
