@@ -9,6 +9,7 @@ permalink: blog/:title/
 # header: large
 
 sass:
+    sass_dir: _sass
     style: compressed
 
 markdown: kramdown

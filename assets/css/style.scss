@@ -49,7 +49,7 @@
 #about h1 {
 	// The h1 will inherit the default theme styling
 	// which should match the Projects page
-	margin-bottom: 1;           // Remove bottom margin
+	margin-bottom: 1em;           // Remove bottom margin
 }
 
 // Content container with flexbox layout
@@ -154,6 +154,6 @@
 		font-size: 0.85em;
 		color: #9E9E9E;
 	  }
-	}
+	}   
   }
   
