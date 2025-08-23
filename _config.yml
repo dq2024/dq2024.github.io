@@ -25,11 +25,10 @@ collections:
 navigation:
     - title: Home
       url: /index.html
-    - title: Publications
-      url: /research
     - title: Projects
       url: /projects
-    
+    - title: Publications
+      url: /research
 
 
 social:
