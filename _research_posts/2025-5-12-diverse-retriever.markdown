@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: research_post
 title: "Diverse Retriever"
 date: 2022-05-01
@@ -33,4 +33,4 @@ description: Iterative Dense Retriever for Multi Perspective QA
       Stella EN 1.5B (v5)</a>: a larger, more expressive embedding model optimized for English retrieval tasks.
   </li>
 </ul>
-</div>
+</div> -->
