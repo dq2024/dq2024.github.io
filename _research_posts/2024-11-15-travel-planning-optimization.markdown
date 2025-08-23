@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: research_post
 title:  "Optimizing Travel Planning"
 date:   2025-05-15
@@ -18,4 +18,4 @@ advisor_url: https://research.ibm.com/people/chen-wang
   </p>
 
 </div>
-
+ -->
