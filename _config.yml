@@ -25,16 +25,18 @@ collections:
 navigation:
     - title: Home
       url: /index.html
-    - title: Projects
-      url: /projects
     - title: Publications
       url: /research
+    - title: Projects
+      url: /projects
 
 
 social:
     github: dq2024
-    email: denizqian@gmail.com
+    email: dq2024@nyu.edu
     linkedin: denizqian
+    twitter: denq1an
+    scholar: https://scholar.google.com/citations?user=HssIlkQAAAAJ&hl=en&authuser=2
 
 google_analytics: "UA-58263416-1"
 

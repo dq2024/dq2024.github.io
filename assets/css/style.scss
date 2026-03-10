@@ -57,7 +57,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;    // align items to top
-	gap: 3em;                   // space between text and image
+	gap: 1.5em;                 // space between text and image
 	margin-top: 0;              // No top margin
 }
 
@@ -72,14 +72,15 @@
 // }
 
 .about-content .photo {
-	flex: 0 0 300px;            // fixed width for photo
-	margin-top: -5em;         // Negative margin to align with h1
-	margin-bottom: 2em;
+	flex: 0 0 180px;
+	align-self: center;
 }
 
 .about-content .photo img {
-	width: 100%;
-	height: auto;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	object-fit: cover;
 	display: block;
 }
 

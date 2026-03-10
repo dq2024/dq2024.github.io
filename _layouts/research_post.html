@@ -10,11 +10,13 @@ layout: default
   <header>
     <h1 class="postTitle">{{ page.title }}</h1>
       <p class="meta">
-        Advisor: <a href="{{ page.advisor_url }}" target="_blank" >{{ page.advisor }}</a>  
-      {% if page.mentor %}
-        | Mentor:  <a href="{{ page.mentor_url }}" target="_blank">{{ page.mentor }}</a>  
+      {% if page.advisor %}
+        Advisor: <a href="{{ page.advisor_url }}" target="_blank" >{{ page.advisor }}</a>
       {% endif %}
-    | 
+      {% if page.mentor %}
+        {% if page.advisor %}|{% endif %} Mentor:  <a href="{{ page.mentor_url }}" target="_blank">{{ page.mentor }}</a>
+      {% endif %}
+      {% if page.advisor or page.mentor %}|{% endif %}
       {% if page.start_date and page.end_date %}
         {{ page.start_date | date: "%b %Y" }} - {{ page.end_date | date: "%b %Y" }}
       {% else %}

@@ -201,7 +201,6 @@ HEADER STYLING
 		line-height: 3em;
 		font-family: $sans-serif;
 		font-weight: 800;
-		text-transform: uppercase;
 
 		a {
 			color: white;
@@ -214,7 +213,8 @@ HEADER STYLING
 POST STYLING
 ***************/
 
-.post {
+.post,
+.research_post {
 	.postTitle {
 		text-align: center;
 		margin-top: 2rem;
