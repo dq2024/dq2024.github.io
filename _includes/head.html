@@ -79,6 +79,16 @@
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 
+	<!-- Responsive overrides (inline to ensure GitHub Pages compatibility) -->
+	<style>
+		.home-layout { display:flex; flex-direction:column; gap:1.5em; align-items:flex-start; margin-top:1em; }
+		.home-sidebar { width:100%; }
+		@media only screen and (min-width:800px) {
+			.home-layout { flex-direction:row; gap:3em; }
+			.home-sidebar { flex:0 0 200px; width:auto; }
+		}
+	</style>
+
 	<!-- Canonical URL -->
 	<link
 		rel="canonical"
