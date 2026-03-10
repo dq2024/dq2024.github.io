@@ -8,7 +8,7 @@ twitter: https://x.com/denq1an/status/2026395698426474554
 google_scholar: https://scholar.google.com/scholar_lookup?arxiv_id=2602.18425
 semantic_scholar: https://www.semanticscholar.org/paper/RVR%3A-Retrieve-Verify-Retrieve-for-Comprehensive-Qian-Chen/d577302822c8ca6fa0738fe5593aa45e451c2212
 authors: "<strong>Deniz Qian</strong>*, Hung-Ting Chen*, Eunsol Choi"
-venue: "Under Review at ICML 2026."
+venue: "Under Review at <a href='https://icml.cc/' target='_blank'>ICML 2026</a>."
 ---
 
 <div class="project-content">
