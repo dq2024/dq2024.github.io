@@ -67,7 +67,7 @@ HEADER STYLING
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-		max-width: 800px;
+		max-width: 1075px;
 		overflow: hidden;
 	}
 
@@ -153,43 +153,7 @@ MENU STYLING
 POST STYLING
 ***************/
 
-.post,
-.research_post {
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ul,
-	ol,
-	dl,
-	.pageTitle {
-		width: 75%;
-		float: none;
-		margin: 0 auto 2rem;
-	}
-
-	h1,
-	.h1,
-	h2,
-	.h2,
-	h3,
-	.h3,
-	h4,
-	.h4,
-	h5,
-	.h5,
-	h6,
-	.h6 {
-		margin: 1rem auto;
-	}
-
-	.pageTitle {
-		margin: 2rem auto 1em;
-	}
+.post {
 
 	.featuredImage {
 		position: relative;

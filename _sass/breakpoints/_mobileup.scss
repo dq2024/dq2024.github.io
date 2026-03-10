@@ -213,11 +213,10 @@ HEADER STYLING
 POST STYLING
 ***************/
 
-.post,
-.research_post {
+.post {
 	.postTitle {
-		text-align: center;
-		margin-top: 2rem;
+		text-align: left;
+		margin-top: 0;
 		margin-bottom: 1rem;
 	}
 
@@ -252,10 +251,10 @@ POST STYLING
 	}
 
 	.meta {
-		text-align: center;
+		text-align: left;
 		color: lighten(black, 50%);
-		font-family: $sans-serif;
-		font-weight: 300;
+		font-family: $serif;
+		font-weight: 400;
 	}
 
 	figure {

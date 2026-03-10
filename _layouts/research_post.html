@@ -1,15 +1,13 @@
 ---
 layout: default
 ---
-<article class="research_post">
-  {%- if page.image -%}
-    <div class="featuredImage">
-        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
-      </div>
-  {%- endif -%}
-  <header>
-    <h1 class="postTitle">{{ page.title }}</h1>
-      <p class="meta">
+<div class="home-layout">
+  {%- include sidebar.html -%}
+
+  <div class="home-main">
+    <h3>{{ page.title }}</h3>
+    {% if page.authors %}<p class="authors">{{ page.authors }}</p>{% endif %}
+    <p class="meta" style="margin-top:-0.5em;">
       {% if page.advisor %}
         Advisor: <a href="{{ page.advisor_url }}" target="_blank" >{{ page.advisor }}</a>
       {% endif %}
@@ -21,31 +19,33 @@ layout: default
         {{ page.start_date | date: "%b %Y" }} - {{ page.end_date | date: "%b %Y" }}
       {% else %}
         {{ page.date | date: "%b %Y" }}
-      {% endif %} 
+      {% endif %}
       {% if page.github %} | <a href="{{ page.github }}" target="_blank">GitHub</a>{% endif %}
       {% if page.pdf %} | <a href="{{ page.pdf }}" target="_blank">Download PDF</a>{% endif %}
+      {% if page.twitter %} | <a href="{{ page.twitter }}" target="_blank">Twitter Post</a>{% endif %}
+      {% if page.google_scholar %} | <a href="{{ page.google_scholar }}" target="_blank">Google Scholar</a>{% endif %}
+      {% if page.semantic_scholar %} | <a href="{{ page.semantic_scholar }}" target="_blank">Semantic Scholar</a>{% endif %}
     </p>
-  </header>
+    {% if page.venue %}<p style="margin-top:-0.5em;"><em>{{ page.venue }}</em></p>{% endif %}
 
-  {{ content }}
-  
-  <!-- POST NAVIGATION -->
-  <footer class="postNav clearfix">
-    {%- if page.previous.url -%}
-      <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | relative_url }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
-      {%- if page.previous.image -%}
-        <img src="{{ '/assets/img/' |  append: page.previous.image | relative_url }}" alt="">
-      {%- endif -%}
-    </a>
-    {%- endif -%}
-    {%- if page.next.url -%}
-      <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
-      {%- if page.next.image -%}
-        <img src="{{ '/assets/img/' | append: page.next.image | relative_url }}" alt="">
-      {%- endif -%}
+    {{ content }}
+
+    <!-- POST NAVIGATION -->
+    <footer class="postNav clearfix">
+      {%- if page.previous.url -%}
+        <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | relative_url }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
+        {%- if page.previous.image -%}
+          <img src="{{ '/assets/img/' |  append: page.previous.image | relative_url }}" alt="">
+        {%- endif -%}
       </a>
-    {%- endif -%}
-  </footer>
-</article>
-
-
+      {%- endif -%}
+      {%- if page.next.url -%}
+        <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
+        {%- if page.next.image -%}
+          <img src="{{ '/assets/img/' | append: page.next.image | relative_url }}" alt="">
+        {%- endif -%}
+        </a>
+      {%- endif -%}
+    </footer>
+  </div>
+</div>

@@ -52,36 +52,64 @@
 	margin-bottom: 1;           // Remove bottom margin
 }
 
-// Content container with flexbox layout
-.about-content {
+// Home page two-column layout
+.home-layout {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;    // align items to top
-	gap: 1.5em;                 // space between text and image
-	margin-top: 0;              // No top margin
+	gap: 3em;
+	align-items: flex-start;
+	margin-top: 1em;
 }
 
-// .about-content .bio {
-// 	flex: 1 1 auto;             // take up available space
-// 	min-width: 0;
-// }
-
-// .about-content .bio p {
-// 	margin: 0;
-// 	line-height: 1.7;           // comfortable reading line height
-// }
-
-.about-content .photo {
-	flex: 0 0 180px;
-	align-self: center;
+.home-sidebar {
+	flex: 0 0 200px;
+	padding-top: 0.5em;
 }
 
-.about-content .photo img {
-	width: 180px;
-	height: 180px;
-	border-radius: 50%;
-	object-fit: cover;
-	display: block;
+.home-main {
+	flex: 1;
+	min-width: 0;
+	font-size: 0.9em;
+}
+
+article.post,
+article.research_post {
+	font-size: 0.9em;
+	margin: 0;
+	padding: 0;
+
+	header {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.sidebar-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		margin-bottom: 0.5em;
+		font-size: 0.7em;
+		color: #6B7280;
+
+		i {
+			width: 1.2em;
+			text-align: center;
+			margin-right: 0.4em;
+			color: #6B7280;
+		}
+
+		a {
+			color: #6B7280;
+			text-decoration: none;
+
+			&:hover {
+				color: #111;
+			}
+		}
+	}
 }
 
 .content {
@@ -99,8 +127,8 @@
 	}
 	
 	li {
-	  margin-bottom: 2em;
-	  padding-bottom: 2em;
+	  margin-bottom: 1em;
+	  padding-bottom: 1em;
 	  border-bottom: 1px solid #E0E0E0;
 	  
 	  &:last-child {
@@ -120,7 +148,7 @@
 	// Title/link styling
 	h3 {
 	  margin: 0 0 0.5em 0;
-	  font-size: 1.3em; // Smaller than default h3
+	  font-size: 1em;
 	  font-weight: 600;
 	  
 	  a {
@@ -138,8 +166,8 @@
 	.description {
 	  margin: 0;
 	  color: #757575;
-	  font-size: 0.95em;
-	  line-height: 1.6;
+	  font-size: 0.85em;
+	  line-height: 1.5;
 	  clear: both; // Clear the floated date
 	}
   }
@@ -295,8 +323,8 @@
 	}
 	
 	li {
-	  margin-bottom: 2em;
-	  padding-bottom: 2em;
+	  margin-bottom: 1em;
+	  padding-bottom: 1em;
 	  border-bottom: 1px solid #E0E0E0;
 	  
 	  &:last-child {
@@ -316,7 +344,7 @@
 	// Title/link styling
 	h3 {
 	  margin: 0 0 0.5em 0;
-	  font-size: 1.3em; // Smaller than default h3
+	  font-size: 1em;
 	  font-weight: 600;
 	  
 	  a {
@@ -334,8 +362,8 @@
 	.description {
 	  margin: 0;
 	  color: #757575;
-	  font-size: 0.95em;
-	  line-height: 1.6;
+	  font-size: 0.85em;
+	  line-height: 1.5;
 	  clear: both; // Clear the floated date
 	}
   }

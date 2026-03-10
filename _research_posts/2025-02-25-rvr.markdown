@@ -2,20 +2,16 @@
 layout: research_post
 title: "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering"
 date: 2025-02-25
-description: "Deniz Qian*, Hung-Ting Chen*, Eunsol Choi"
+description: "<strong>Deniz Qian</strong>*, Hung-Ting Chen*, Eunsol Choi"
 pdf: https://arxiv.org/pdf/2602.18425
+twitter: https://x.com/denq1an/status/2026395698426474554
+google_scholar: https://scholar.google.com/scholar_lookup?arxiv_id=2602.18425
+semantic_scholar: https://www.semanticscholar.org/paper/RVR%3A-Retrieve-Verify-Retrieve-for-Comprehensive-Qian-Chen/d577302822c8ca6fa0738fe5593aa45e451c2212
+authors: "<strong>Deniz Qian</strong>*, Hung-Ting Chen*, Eunsol Choi"
+venue: "Under Review at ICML 2026."
 ---
 
-<div class="project-content layout-centered">
-  <p>
-    <em>Under Review at ICML 2026.</em>
-  </p>
-
-  <p>
-    Deniz Qian*, Hung-Ting Chen*, Eunsol Choi
-    <br><small>(* equal contribution)</small>
-  </p>
-
+<div class="project-content">
   <h4>Abstract</h4>
   <p>
     Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high-quality subset. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds. RVR is effective even with off-the-shelf retrievers, and fine-tuning retrievers for our inference procedure brings further gains. Our method outperforms baselines, including agentic search approaches, achieving at least 10% relative and 3% absolute gain in complete recall percentage on a multi-answer retrieval dataset (QAMPARI). We also see consistent gains on two out-of-domain datasets (QUEST and WebQuestionsSP) across different base retrievers. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario.
