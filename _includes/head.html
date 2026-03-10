@@ -81,11 +81,15 @@
 
 	<!-- Responsive overrides (inline to ensure GitHub Pages compatibility) -->
 	<style>
-		.home-layout { display:flex; flex-direction:column; gap:1.5em; align-items:flex-start; margin-top:1em; }
-		.home-sidebar { width:100%; }
+		.home-layout { display:flex; flex-direction:column; gap:1.5em; align-items:center; margin-top:1em; }
+		.home-sidebar { width:100%; text-align:center; }
+		.home-sidebar .sidebar-links { display:inline-block; text-align:left; }
+		.postNav { display:flex; gap:1em; }
+		.postNav .prev, .postNav .next { flex:1; }
 		@media only screen and (min-width:800px) {
-			.home-layout { flex-direction:row; gap:3em; }
-			.home-sidebar { flex:0 0 200px; width:auto; }
+			.home-layout { flex-direction:row; gap:3em; align-items:flex-start; }
+			.home-sidebar { flex:0 0 200px; width:auto; text-align:left; }
+			.home-sidebar .sidebar-links { display:block; }
 		}
 	</style>
 
